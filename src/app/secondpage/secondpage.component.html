@@ -1,0 +1,25 @@
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <!-- Section: Filters -->
+        <div class="col-lg-3">
+            <h1 style="margin-top: 2em; margin-bottom: 2em; position: fixed; color: white;">T-shirts</h1>
+            <!-- <h1 style="margin-top: 2em; margin-bottom: 2em;" *ngIf="{{ category }} === ''">Pulls</h1> -->
+
+        </div>
+        <!-- Section: Filters -->
+
+        <div class="col-lg-9" style="margin-top: 7em; margin-bottom: 9em;" >
+            <div class="card-columns justify-content-center">
+                <div class="row" style="flex-wrap: wrap;" *ngFor="let product of filterItemsOfType('shirt')">
+                    <app-product [product]="product" class="deck-card"></app-product>
+                </div>
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.col-lg-9 -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->

@@ -1,0 +1,46 @@
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Portfolio Item Row -->
+    <div class="row" style="margin-top: 5em;">
+
+        <div class="col-md-8 justify-content-center">
+            <img  style="height: 40em;" class="d-block img-fluid w-auto" src={{photo}} onerror="this.src='assets/img/error.jpg';" alt="">
+        </div>
+
+        <div class="col-md-4">
+            <h6 *ngIf="coll === 'sweat'">Pull</h6>
+            <h6 *ngIf="coll === 'shirt'">T-shirt</h6>
+            <h6 *ngIf="coll === 'accessorie'">Accessoire</h6>
+            <h3 class="my-3">{{ name }}</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
+                urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies,
+                justo eu convallis placerat, felis enim.</p>
+            <h5 class="my-3" *ngIf="coll !== 'accessorie'">Choisir une taille</h5>
+            <ul  *ngIf="coll !== 'accessorie'">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin-left: 0;">
+                    <label class="btn btn-outline-dark">
+                        <input type="radio" name="options" id="size1" (click)="onSizeXS()"> XS
+                    </label>
+                    <label class="btn btn-outline-dark">
+                        <input type="radio" name="options" id="size2" (click)="onSizeS()"> S
+                    </label>
+                    <label class="btn btn-outline-dark active">
+                        <input type="radio" name="options" id="size3" checked (click)="onSizeM()"> M
+                    </label>
+                    <label class="btn btn-outline-dark">
+                        <input type="radio" name="options" id="size4" (click)="onSizeL()"> L
+                    </label>
+                    <label class="btn btn-outline-dark">
+                        <input type="radio" name="options" id="size5" (click)="onSizeXL()"> XL
+                    </label>
+                </div>
+            </ul>
+            <button type="button" class="btn btn-success mt-5" (click)="onClickMe()">Ajouter au panier</button>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->

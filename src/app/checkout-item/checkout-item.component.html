@@ -1,0 +1,10 @@
+<li class="list-group-item d-flex justify-content-between">
+
+    <div>
+        <h6>{{ Name }}</h6>
+        <small class="text-muted" *ngIf="Coll !== 'accessorie'">Taille : {{ Size | uppercase }}</small>
+    </div>
+
+    <span class="text-right">{{ Price }}€</span>
+
+</li>

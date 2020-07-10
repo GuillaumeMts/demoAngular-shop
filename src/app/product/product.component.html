@@ -1,0 +1,24 @@
+<!-- Product item -->
+<div class="card" style="width: 16em;">
+
+    <div class="card-img-top" style="height: 20em;">
+        <img [routerLink]="[product.id]" class="img-fluid" src="{{ product.photo }}"
+            onerror="this.src='images/img/error.jpg';" alt="">
+    </div>
+
+    <!-- <span class="badge badge-pill badge-danger">sales</span> -->
+
+    <div class="card-body" style="height: 6em;">
+
+        <h6 class="card-title" style="margin-top: 0; margin-bottom: 0;">
+            <a [routerLink]="[product.id]"> {{ product.name }}</a>
+        </h6>
+
+        <h6 class="card-text text-right"> {{ product.price }}€</h6>
+
+        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;
+            ({{product.id}})</small>
+
+    </div>
+
+</div>
