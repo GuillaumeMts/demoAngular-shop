@@ -69,7 +69,7 @@
                             <!--Grid column-->
                             <div class="col-lg-4 col-md-6 mb-2">
 
-                                <input type="text" class="form-control" id="zip" placeholder="Code postal" required>
+                                <input type="text" class="form-control" id="zip" placeholder="Code postal">
                                 <div class="invalid-feedback">
                                     Code postal requis.
                                 </div>
@@ -80,7 +80,7 @@
                             <!--Grid column-->
                             <div class="col-lg-4 col-md-6 mb-2">
 
-                                <input type="text" class="form-control" id="city" placeholder="Ville" required>
+                                <input type="text" class="form-control" id="city" placeholder="Ville">
                                 <div class="invalid-feedback">
                                     Ville requise
                                 </div>
@@ -90,7 +90,7 @@
 
                             <!--Grid column-->
                             <div class="col-lg-4 col-md-12 mb-">
-                                <select class="custom-select d-block" id="country" required>
+                                <select class="custom-select d-block" id="country">
                                     <option value="">Pays</option>
                                     <option>Allemagne</option>
                                     <option>Belgique</option>
@@ -126,26 +126,26 @@
                         <div class="d-block my-3">
                             <div class="custom-control custom-radio">
                                 <input id="credit" name="paymentMethod" type="radio" class="custom-control-input"
-                                    checked required>
+                                    checked>
                                 <label class="custom-control-label" for="credit">Carte de crédit</label>
                             </div>
                             <div class="custom-control custom-radio">
                                 <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input"
-                                    required>
+                                   >
                                 <label class="custom-control-label" for="paypal">Paypal</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <input type="text" class="form-control" id="cc-name" placeholder="Titulaire de la carte"
-                                    required>
+                                   >
                                 <div class="invalid-feedback">
                                     Titulaire de la carte requis
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <input type="text" class="form-control" id="cc-number" placeholder="Numéro de carte"
-                                    required>
+                                   >
                                 <div class="invalid-feedback">
                                     Numéro de carte de crédit requis
                                 </div>
@@ -154,20 +154,20 @@
                         <div class="row">
                             <div class="col-md-3 mb-3">
                                 <input type="text" class="form-control" id="cc-expiration"
-                                    placeholder="Date d'expiration" required>
+                                    placeholder="Date d'expiration">
                                 <div class="invalid-feedback">
                                     Date d'expiration requise
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
-                                <input type="text" class="form-control" id="cc-cvv" placeholder="CVV" required>
+                                <input type="text" class="form-control" id="cc-cvv" placeholder="CVV">
                                 <div class="invalid-feedback">
                                     Code CVV requis
                                 </div>
                             </div>
                         </div>
                         <hr class="mb-4">
-                        <button class="btn btn-dark btn-lg btn-block" type="submit">Valider le payement</button>
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" (click)="checkoutClick()">Valider le payement</button>
 
                     </form>
 

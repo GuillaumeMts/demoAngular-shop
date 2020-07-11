@@ -35,7 +35,7 @@ export class CheckoutpageComponent implements OnInit {
 
   checkoutClick()
   {
-    alert("Checkout not implemented\nYour cart has been cleared");
+    alert("Le payement n'a pas été implémenté\nVotre panier a été vidé");
     this.cartService.emptyCart();
     this.cartList=this.cartService.cartProductList;
   }

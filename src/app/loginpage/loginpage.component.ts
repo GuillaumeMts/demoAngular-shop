@@ -12,4 +12,7 @@ export class LoginpageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  loginClick(): void {
+    alert("Le service de comptes n'a pas été implémenté");
+  }
 }
