@@ -1,6 +1,5 @@
 # DemoAngularShop
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+Hosted by Firebase at: https://demoangular-shop.firebaseapp.com/sweat
 
 ## Development server
 
