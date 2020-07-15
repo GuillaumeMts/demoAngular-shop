@@ -39,30 +39,30 @@ export class ProductpageComponent implements OnInit {
     this.size = this.product.size;
   }
 
-  onClickMe():void
-  {
+  onClickMe(): void  {
     this.cartService.addItem(this.product);
     this.myCart=this.cartService.cartProductList;
   }
 
   onSizeXS(): void {
-    this.product.size = 'xs';
+    this.productService.changeSize(this.product, 'xs');
+    console.log(this.product.size)
   }
 
   onSizeS(): void {
-    this.product.size = 's';
+    this.productService.changeSize(this.product, 's');
   }
 
   onSizeM(): void {
-    this.product.size = 'm';
+    this.productService.changeSize(this.product, 'm');
   }
 
   onSizeL(): void {
-    this.product.size = 'l';
+    this.productService.changeSize(this.product, 'l');
   }
 
   onSizeXL(): void {
-    this.product.size = 'xl';
+    this.productService.changeSize(this.product, 'xl');
   }
 
 }

@@ -6,6 +6,7 @@ import { ProductService } from './product.service'
 
 
 @Injectable({ providedIn: 'root' })
+
 export class CartService {
 
     cartProductList: Product[] = [];
@@ -26,16 +27,15 @@ export class CartService {
         }
         this.getData();
         this.updateCart();
-        // this.cartProductList=getData;
     }
 
 
     saveData() {
-        localStorage.setItem("myCart", JSON.stringify(this.cartProductList));
+        sessionStorage.setItem("myCart", JSON.stringify(this.cartProductList));
     }
 
     getData() {
-        var returnValue = JSON.parse(localStorage.getItem("myCart"));
+        var returnValue = JSON.parse(sessionStorage.getItem("myCart"));
         this.localDataTested = true;
         if (returnValue != null) {
             this.dataReceived = true;

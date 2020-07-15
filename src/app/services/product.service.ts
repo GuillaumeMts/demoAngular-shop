@@ -53,5 +53,9 @@ export class ProductService {
     getAll() {
         return this.products;
     }
+
+    changeSize(prod: Product, size: string): void {
+        prod.size = size;
+    }
 }
 
